@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScriptTest</title>
+    
+</head>
+<body>
+    <title>JavaScriptTest</title>
+<body>
+    <h1>Probando JS</h1>
+    <h3 id="res"></h3>
+    <p id="demo"></p>
+    <script>
+        // console.log("Hola Mundo");
+        // var nombre = "Benja";
+        // var edad = 24;
+        // var sum,n1=8,n2=20;
+        // sum=n1+n2;
+        // console.log("Tu edad es " + edad);
+        // console.log("tu nombre es: "+ nombre);
+        // console.log("tu suma es "+ sum);
+        // var numero1 = parseInt(prompt("Ingrese un numero distinto a 0"));
+        // var numero2 = parseInt(prompt("Ingrese un numero distinto a 0"));
+        // var sum2;
+        // var resta;
+        // var multi;
+        // sum2 = numero1 + numero2;
+        // resta= numero1 - numero2;
+        // multi= numero1*numero2;
+        // console.log(sum2);
+        // console.log(resta);
+        // console.log(multi); 
+
+        // function suma(){
+        //     var numero1 = parseInt(prompt("Ingrese un numero distinto a 0"));
+        //     var numero2 = parseInt(prompt("Ingrese un numero distinto a 0"));
+        //     sum = numero1 + numero2;
+        //     console.log("Su suma es: "+sum);
+        // }
+        
+        function edad(){
+            var edad = parseInt(prompt("Ingrese su edad"));
+            while(edad < 0){
+                    console.log("edad menor a 0 ingrese edad valida");
+                    var edad = parseInt(prompt("Edad invalida ingresela nuevamente"));
+            }
+
+            if(edad < 18){
+                console.log("Persona menor de edad");
+                document.getElementById("res").innerHTML = "Persona Es un menor de edad: " + edad;
+            }else if(edad < 65 && edad >= 18){
+                console.log("Persona es un adulto");
+                document.getElementById("res").innerHTML = "Persona es un Adulto: "+ edad;
+            }else if(edad >= 65 && edad < 85){
+                console.log("Persona es adulto mayor");
+                document.getElementById("res").innerHTML = "Persona es un Adulto Mayor" + edad;
+            }else{
+                console.log("Persona en sus años dorados");
+                document.getElementById("res").innerHTML = "Persona en sus Años Dorados" + edad;
+            }
+        }
+
+        function LlenarArray(){
+            const numbers = [1];
+            for (let i = 0; i < 10; i++){
+                numbers.push(numbers[i]* 2);
+            }
+            console.log(numbers);
+        }
+
+        function TraerMax(){
+            const numero = [2,3,4,5,6,7,8,9,10,11]
+            numero.sort(function(a,b){return b-a})
+
+            document.getElementById("demo").innerHTML = "El numero mayor es " + numero[0];
+        }
+        function diaSemana(){
+            
+        }
+        TraerMax();
+        // suma();
+        // edad();
+        // LlenarArray();
+    </script>
+</body>
+</body>
+</html>
